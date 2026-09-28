@@ -14,7 +14,7 @@ source .venv/bin/activate
 Run the starter test suite:
 
 ```bash
-python -m unittest discover -s tests
+python -m unittest discover -s tests -t .
 ```
 
 ## Project structure
