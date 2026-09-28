@@ -9,5 +9,5 @@ description = "A repo for experiments and AI research."
 readme = "README.md"
 requires-python = ">=3.10"
 
-[tool.setuptools.packages.find]
-include = ["ai_research"]
+[tool.setuptools]
+packages = ["ai_research"]
