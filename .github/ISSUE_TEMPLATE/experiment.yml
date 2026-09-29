@@ -1,0 +1,118 @@
+name: Experiment
+description: Pre-register a controlled experiment on getting better results from AI agents and their tools.
+title: "[Experiment] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill every required field before running anything. Success criteria are fixed here, before results exist.
+        Sections marked "after the run" are added as comments or edits once results are in. The abstract is written last.
+  - type: textarea
+    id: metadata
+    attributes:
+      label: 0. Status and metadata
+      description: Owner, start date, related issues, models and surfaces (model IDs, Claude Code / claude.ai / API).
+      placeholder: |
+        Owner: @
+        Started: YYYY-MM-DD
+        Related: #
+        Models / surfaces:
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 1. Purpose
+      description: The one question this experiment answers.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 2. Scope
+      description: What is in and what is out.
+      placeholder: |
+        In:
+        Out:
+    validations:
+      required: true
+  - type: textarea
+    id: hypotheses
+    attributes:
+      label: 3. Hypotheses
+      description: Each with a predicted outcome and what result would falsify it.
+      placeholder: |
+        H1: <prediction>. Falsified if <observable result>.
+    validations:
+      required: true
+  - type: textarea
+    id: background
+    attributes:
+      label: 4. Background
+      description: Published work (link and date checked for each source) and internal evidence (links to issues, runs, transcripts). Keep the two separate.
+      placeholder: |
+        Published (checked YYYY-MM-DD):
+        -
+        Internal evidence:
+        -
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: 5. Design
+      description: Conditions (independent variables), tasks and the fixed baseline, measures with exact definitions (dependent variables), and what is held constant.
+      placeholder: |
+        Conditions:
+        Tasks / baseline:
+        Measures (definition of each):
+        Held constant:
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: 6. Success criteria
+      description: Thresholds decided now, before running. What result leads to which decision.
+    validations:
+      required: true
+  - type: textarea
+    id: protocol
+    attributes:
+      label: 7. Protocol
+      description: Numbered steps. Runs per condition, order randomisation, blinding, who or what grades, stop rules, time and token budget per run.
+    validations:
+      required: true
+  - type: textarea
+    id: reproducibility
+    attributes:
+      label: 8. Reproducibility record
+      description: Versions (commits, skill versions, model IDs), prompts verbatim or linked, where transcripts and results are stored (the location must already exist), and where answer keys are held so tested runs cannot read them.
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: 9. Risks, threats to validity, ethics and cost
+      description: Contamination, small samples, grader bias, coaching mid-run; real spend or content rules; the overall cost budget.
+    validations:
+      required: true
+  - type: textarea
+    id: after
+    attributes:
+      label: 10-14. After the run
+      description: Leave as-is at creation. Filled in later - results (raw table), analysis, conclusions and decisions, abstract and paper outline, method learnings.
+      value: |
+        10. Results: (after the run)
+        11. Analysis: (after the run)
+        12. Conclusions and decisions: (after the run)
+        13. Abstract and paper outline: (written last)
+        14. Method learnings: (after the run)
+    validations:
+      required: false
+  - type: textarea
+    id: scratchpad
+    attributes:
+      label: Appendix - scratchpad (not part of the protocol)
+    validations:
+      required: false
